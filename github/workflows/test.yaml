@@ -1,0 +1,17 @@
+name: test joe
+on: push
+jobs:
+     test-me:
+             runs-on: ubuntu-lastest
+             steps:
+             name: checkout phase
+             uses: actions/check@v3
+             run:
+                  mkdir test-me
+                  ls .
+             run:
+                 touch mama.txt
+                 echo "my new wab" > mama.txt
+                 ls .
+                 cat mama.txt
+
